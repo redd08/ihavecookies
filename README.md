@@ -34,20 +34,20 @@ $('body').ihavecookies(options);
 
 Опция | Значение по-умолчанию | Описание
 ------ | ------------- | -----------
-title | "Cookies & Privacy" | A custom title for the popup
-message | "Cookies enable you to use shopping carts and to personalize your experience on our sites, tell us which parts of our websites people have visited, help us measure the effectiveness of ads and web searches, and give us insights into user behavior so we can improve our communications and products." | Add your own cookie message here, if you prefer not to use the default one. HTML can be included within this message.
-link | "/privacy-policy" | Link to your privacy policy for more information
-delay | 2000 | Time before the popup is displayed after page load (in milliseconds)
-expires | 30 | Days for the cookie to expire
-onAccept | function(){} | Optional callback function when 'Accept' button is clicked
-uncheckBoxes | false | Unchecks all checkboxes on page load that have class .ihavecookies applied to them. Set to true to turn this option on
-moreInfoLabel | 'More information' | Label for link to privacy policy
-acceptBtnLabel | 'Accept All Cookies' | Label for accept cookies button
-advancedBtnLabel | 'Customise Cookies' | Label for customise cookies button
-cookieTypesTitle | 'Select cookies to accept' | Title for customise cookies section
-fixedCookieTypeLabel | 'Necessary' | Label for the "necessary" cookie type
-fixedCookieTypeDesc | 'These are cookies that are essential for the website to work correctly.' | Description for the "necessary" cookie type
-cookieTypes | Array | Array of cookie types for which to show checkboxes for - See code example below.
+title | "Файлы cookie и конфиденциальность" | Пользовательский заголовок для всплывающего окна
+message | "Файлы cookie позволяют вам использовать корзину для покупок и персонализировать ваш выбор на наших сайтах, сообщают нам, какие части наших веб-сайтов посещали люди, помогают нам измерять эффективность рекламы и поисковых запросов в Интернете, а также дают нам представление о поведении пользователей, чтобы мы могли улучшить свои сервисы." | Cобственное сообщение cookie, если вы предпочитаете не использовать по-умолчанию. HTML-код может быть включен в это сообщение.
+link | "/privacy-policy" | Ссылка на вашу политику конфиденциальности для получения дополнительной информации
+delay | 2000 | Время до появления всплывающего окна после загрузки страницы (в миллисекундах)
+expires | 30 | Дни истечения срока действия cookie
+onAccept | function(){} | Дополнительная callback-функция при нажатии кнопки «Принять»
+uncheckBoxes | false | Снимает все флажки при загрузке страницы, к которым применяются классы .ihavecookies. Установите в true, чтобы включить эту опцию
+moreInfoLabel | 'Подробнее' |  Надпись ссылки на политику конфиденциальности
+acceptBtnLabel | 'Согласен' | Надпись кнопки согласия
+advancedBtnLabel | 'Настроить' | Надпись кнопки настройки пользовательских cookie
+cookieTypesTitle | 'Выберите cookie файлы, которые принимаете' | Название для раздела пользовательских файлов cookie
+fixedCookieTypeLabel | 'Основные' | Заголовок "основных" cookie файлов
+fixedCookieTypeDesc | 'Файлы cookie, которые необходимы для коррекной работы сайта.' | Описание для "основных" cookie файлов.
+cookieTypes | Массив [] | Массив типов файлов cookie, для которых должны отображаться флажки - см. Пример кода ниже.
 
 ### События
 
