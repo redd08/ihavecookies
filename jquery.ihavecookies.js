@@ -7,56 +7,68 @@
  * http://www.opensource.org/licenses/mit-license.php
  *
  */
+/*!
+ * Translate to Russian language by @redd08
+ *
+*/
 (function($) {
 
     /*
     |--------------------------------------------------------------------------
-    | Cookie Message
+    | Сообщение об использовании cookie's файлов
     |--------------------------------------------------------------------------
     |
-    | Displays the cookie message on first visit or 30 days after their
-    | last visit.
+    | Показывает сообщение об исользовании cookie's-файлов при первом посещении, либо спустя 30 дней
+    | с последнего визита.
     |
-    | @param event - 'reinit' to reopen the cookie message
+    | @param event - 'reinit' переоткрывает сообщение об использовании cookie's файлов
     |
     */
     $.fn.ihavecookies = function(options, event) {
 
         var $element = $(this);
 
-        // Set defaults
-        var settings = $.extend({
-            cookieTypes: [
-                {
-                    type: 'Site Preferences',
-                    value: 'preferences',
-                    description: 'These are cookies that are related to your site preferences, e.g. remembering your username, site colours, etc.'
-                },
-                {
-                    type: 'Analytics',
-                    value: 'analytics',
-                    description: 'Cookies related to site visits, browser types, etc.'
-                },
-                {
-                    type: 'Marketing',
-                    value: 'marketing',
-                    description: 'Cookies related to marketing, e.g. newsletters, social media, etc'
-                }
-            ],
-            title: 'Cookies & Privacy',
-            message: 'Cookies enable you to use shopping carts and to personalize your experience on our sites, tell us which parts of our websites people have visited, help us measure the effectiveness of ads and web searches, and give us insights into user behavior so we can improve our communications and products.',
-            link: '/privacy-policy',
-            delay: 2000,
-            expires: 30,
-            moreInfoLabel: 'More information',
-            acceptBtnLabel: 'Accept Cookies',
-            advancedBtnLabel: 'Customise Cookies',
-            cookieTypesTitle: 'Select cookies to accept',
-            fixedCookieTypeLabel:'Necessary',
-            fixedCookieTypeDesc: 'These are cookies that are essential for the website to work correctly.',
-            onAccept: function(){},
-            uncheckBoxes: false
-        }, options);
+        // Настройки по-умолчанию
+        var settings = $.extend(
+            {
+                cookieTypes: [
+                    {
+                        type: "Настройки сайта",
+                        value: "preferences",
+                        description:
+                            "Данные файлы cookie, связаны с настройками сайта, например, запоминание имени пользователя, темы сайта и т. д."
+                    },
+                    {
+                        type: "Аналитика",
+                        value: "analytics",
+                        description:
+                            "Файлы cookie, связанные с посещениями сайта, типами браузеров и т. д."
+                    },
+                    {
+                        type: "Маркетинг",
+                        value: "marketing",
+                        description:
+                            "Файлы cookie, связанные с маркетингом, например информационные письма, социальные сети и т. д."
+                    }
+                ],
+                title: "Файлы cookie и конфиденциальность",
+                message:
+                    "Файлы cookie позволяют вам использовать корзину для покупок и персонализировать ваш выбор на наших сайтах, сообщают нам, какие части наших веб-сайтов посещали люди, помогают нам измерять эффективность рекламы и поисковых запросов в Интернете, а также дают нам представление о поведении пользователей, чтобы мы могли улучшить свои сервисы.",
+                link: "/privacy-policy",
+                delay: 2000,
+                expires: 30,
+                moreInfoLabel: "Подробнее",
+                acceptBtnLabel: "Принять",
+                advancedBtnLabel: "Настроить",
+                cookieTypesTitle: "Выберите cookie файлы, которые принимаете",
+                fixedCookieTypeLabel: "Основные",
+                fixedCookieTypeDesc:
+                    "Файлы cookie, которые необходимы для коррекной работы сайта.",
+                onAccept: function() {},
+                uncheckBoxes: false
+            },
+            options
+        );
 
         var myCookie = getCookie('cookieControl');
         var myCookiePrefs = getCookie('cookieControlPrefs');
